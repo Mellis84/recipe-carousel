@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  max-width: calc(100vw - $gap-width * 2);
+  margin: 0 auto;
+
+  @media (min-width: $bp-tablet) {
+    max-width: calc(100vw - $gap-width * 4);
+  }
+
+  @media (min-width: $bp-desktop-small) {
+    max-width: calc(100vw - $gap-width * 10);
+  }
+
+  @media (min-width: $bp-wide) {
+    max-width: min($bp-wide, calc(100vw - $gap-width * 10));
+  }
+}
