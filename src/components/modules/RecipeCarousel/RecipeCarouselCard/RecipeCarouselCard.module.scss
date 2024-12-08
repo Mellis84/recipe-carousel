@@ -1,0 +1,77 @@
+.card {
+  flex: none;
+  cursor: pointer;
+  width: calc(34% - $spacing-m);
+  min-width: 27rem;
+  background-color: $c-white;
+  border-radius: 1.5rem;
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &__inner {
+    will-change: transform;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+}
+
+.front,
+.back {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-s;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  .image {
+    display: flex;
+    border-radius: 0.75rem;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .meta {
+
+    p,
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.3;
+    }
+  }
+
+  .addToWishlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background-color: $c-white;
+    border: 1px solid $c-grey;
+    border-radius: 50%;
+    padding: $spacing-xs;
+    margin: $spacing-xs;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+    }
+  }
+}
