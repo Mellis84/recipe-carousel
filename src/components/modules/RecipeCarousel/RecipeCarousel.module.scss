@@ -1,9 +1,24 @@
 .carousel {
-  display: flex;
-  gap: $spacing-m;
-  overflow: auto;
-  width: 100%;
   background-color: $c-white;
-  padding: $spacing-l 0;
   border-radius: 1.5rem;
+  overflow: hidden;
+
+  &__inner {
+    display: flex;
+    gap: $gap-width;
+    cursor: grab;
+    width: max-content;
+    padding: $spacing-xl $spacing-m;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
+
+.loader {
+  float: none;
+  width: calc(33.22vw - 10.25rem);
+  min-width: 27rem;
+  max-width: 53rem;
 }
